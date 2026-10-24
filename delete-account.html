@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitud de Eliminación de Cuenta - Tito</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 16px 64px;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      margin-top: 18px;
+      color: #333;
+    }
+    label:first-of-type { margin-top: 0; }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: #1a1a1a;
+      background: #fafafa;
+      transition: border-color 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #0066cc;
+      background: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+    .info-box {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      color: #5a4500;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .info-box strong { display: block; margin-bottom: 4px; }
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      background: #cc2200;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: background 0.2s;
+    }
+    button[type="submit"]:hover { background: #a81c00; }
+    .footer-note {
+      text-align: center;
+      color: #888;
+      font-size: 0.82rem;
+      margin-top: 24px;
+    }
+    a { color: #0066cc; }
+  </style>
+</head>
+<body>
+  <h1>Eliminar mi cuenta</h1>
+  <p class="subtitle">
+    Tito &mdash; <code>com.lnogueira.cadeteria.mobile</code>
+  </p>
+
+  <div class="card">
+    <p style="margin-top:0">
+      Completá el siguiente formulario para solicitar la eliminación de tu cuenta y todos tus datos asociados.
+      Procesaremos tu solicitud dentro de los <strong>7 días hábiles</strong>.
+    </p>
+
+    <form id="deleteForm">
+      <label for="email">Correo electrónico de tu cuenta *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="usuario@ejemplo.com"
+        required
+      />
+
+      <label for="name">Nombre completo (opcional)</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Tu nombre"
+      />
+
+      <label for="reason">Motivo de la solicitud (opcional)</label>
+      <select id="reason" name="reason">
+        <option value="">Seleccioná un motivo…</option>
+        <option value="No uso más la aplicación">No uso más la aplicación</option>
+        <option value="Problemas con el servicio">Problemas con el servicio</option>
+        <option value="Preocupaciones de privacidad">Preocupaciones de privacidad</option>
+        <option value="Creé otra cuenta">Creé otra cuenta</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="comments">Comentarios adicionales (opcional)</label>
+      <textarea
+        id="comments"
+        name="comments"
+        placeholder="Podés agregar cualquier detalle adicional aquí…"
+      ></textarea>
+
+      <div class="info-box">
+        <strong>¿Qué datos se eliminarán?</strong>
+        Al confirmar, eliminaremos tu cuenta, historial de pedidos, información personal y cualquier dato asociado a tu usuario en nuestra plataforma. Esta acción es irreversible.
+      </div>
+
+      <button type="submit">Solicitar eliminación de cuenta</button>
+    </form>
+
+    <p class="footer-note">
+      ¿Tenés preguntas? Escribinos a
+      <a href="mailto:maitinn255@gmail.com">maitinn255@gmail.com</a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('deleteForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email    = document.getElementById('email').value.trim();
+      const name     = document.getElementById('name').value.trim();
+      const reason   = document.getElementById('reason').value;
+      const comments = document.getElementById('comments').value.trim();
+
+      const to      = 'maitinn255@gmail.com';
+      const subject = encodeURIComponent('Solicitud de eliminación de cuenta - ' + email);
+
+      let body = 'Solicitud de eliminación de cuenta\n';
+      body += '====================================\n\n';
+      body += 'Correo del usuario: ' + email + '\n';
+      if (name)     body += 'Nombre: ' + name + '\n';
+      if (reason)   body += 'Motivo: ' + reason + '\n';
+      if (comments) body += 'Comentarios: ' + comments + '\n';
+      body += '\nApp: Tito (com.lnogueira.cadeteria.mobile)\n';
+      body += 'Fecha de solicitud: ' + new Date().toLocaleString('es-AR') + '\n';
+
+      const mailtoLink = 'mailto:' + to +
+        '?subject=' + subject +
+        '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>

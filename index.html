@@ -15,6 +15,7 @@
     }
     h1 { font-size: 1.8rem; margin-bottom: 4px; }
     h2 { font-size: 1.2rem; margin-top: 32px; }
+    h3 { font-size: 1rem; margin-top: 20px; }
     .updated { color: #666; font-size: 0.9rem; margin-bottom: 24px; }
     ul { padding-left: 20px; }
     li { margin-bottom: 6px; }
@@ -31,72 +32,116 @@
 </head>
 <body>
   <h1>Política de Privacidad de Tito</h1>
-  <p class="updated">Última actualización: 9 de julio de 2026</p>
+  <p class="updated">Última actualización: 24 de octubre de 2026</p>
 
   <div class="identity">
     <p><strong>Aplicación:</strong> Tito</p>
     <p><strong>Paquete (Android):</strong> <code>com.lnogueira.cadeteria.mobile</code></p>
+    <p><strong>Bundle ID (iOS):</strong> <code>com.lnogueira.cadeteria.mobile</code></p>
     <p><strong>Desarrollador:</strong> Logistica 21</p>
     <p><strong>Correo de contacto:</strong> <a href="mailto:maitinn255@gmail.com">maitinn255@gmail.com</a></p>
   </div>
 
   <p>
     Esta Política de Privacidad describe cómo la aplicación <strong>Tito</strong>
-    (paquete: <code>com.lnogueira.cadeteria.mobile</code>), desarrollada y publicada
-    por <strong>Logistica 21</strong>, recopila, usa y protege la información personal
-    de sus usuarios.
+    (identificador: <code>com.lnogueira.cadeteria.mobile</code>, disponible para
+    Android e iOS), desarrollada y publicada por <strong>Logistica 21</strong>,
+    recopila, usa y protege la información personal de los cadetes que la utilizan.
+  </p>
+  <p>
+    Tito es una herramienta de trabajo para cadetes registrados. Las cuentas son
+    creadas por el administrador del servicio; la app no permite registrarse por
+    cuenta propia.
   </p>
 
   <h2>1. Información que recopilamos</h2>
   <ul>
     <li>
-      <strong>Ubicación en tiempo real:</strong> cuando tenés una jornada activa,
-      la app solicita acceso a tu ubicación en primer y segundo plano para registrar
-      el recorrido de tus entregas.
+      <strong>Ubicación precisa:</strong> mientras tenés una jornada activa, la app
+      registra tu ubicación, también con la app en segundo plano, para hacer el
+      seguimiento de tus entregas. Fuera de la jornada no se recopila ubicación.
     </li>
     <li>
-      <strong>Datos de cuenta:</strong> nombre de usuario e información básica de
-      perfil necesaria para identificarte dentro del sistema de cadetería.
+      <strong>Fotografía (selfie de inicio de jornada):</strong> al iniciar la
+      jornada la app usa la cámara para tomar una foto, que se usa únicamente para
+      verificar tu identidad y queda asociada al registro de esa jornada. La app no
+      accede a tu galería de fotos.
     </li>
     <li>
-      <strong>Datos de actividad:</strong> registro de jornadas, pedidos asignados
-      y estado de entregas para el correcto funcionamiento del servicio.
+      <strong>Datos de cuenta:</strong> nombre, correo electrónico y la información
+      de perfil necesaria para identificarte dentro del servicio.
+    </li>
+    <li>
+      <strong>Datos de actividad:</strong> jornadas, pedidos asignados, aceptados y
+      rechazados, y estado de las entregas.
+    </li>
+    <li>
+      <strong>Identificador del dispositivo para notificaciones:</strong> un token
+      de notificaciones push que permite avisarte de pedidos nuevos.
+    </li>
+    <li>
+      <strong>Datos técnicos y de diagnóstico:</strong> versión de la app, estado
+      de los permisos, registros de errores y reportes de fallos (crashes), para
+      detectar y corregir problemas.
     </li>
   </ul>
 
   <h2>2. Cómo usamos la información</h2>
   <ul>
-    <li>Rastrear y registrar el recorrido de entregas durante la jornada laboral activa.</li>
-    <li>Mostrar el estado de los pedidos en tiempo real a los operadores.</li>
-    <li>Mejorar la experiencia del servicio de cadetería.</li>
+    <li>Asignarte pedidos y avisarte de pedidos nuevos.</li>
+    <li>Registrar el recorrido de tus entregas durante la jornada activa.</li>
+    <li>Mostrar a los operadores el estado de los pedidos y tu ubicación en tiempo real durante la jornada.</li>
+    <li>Verificar tu identidad al inicio de cada jornada.</li>
+    <li>Diagnosticar fallos y mejorar el funcionamiento de la app.</li>
   </ul>
+  <p>
+    No usamos tu información para publicidad ni para rastrearte en otras apps o
+    sitios web, y no la vendemos.
+  </p>
 
   <h2>3. Ubicación en segundo plano</h2>
   <p>
-    La app utiliza la ubicación en segundo plano (<em>background location</em>)
-    <strong>únicamente mientras tenés una jornada activa</strong>. Este acceso se
-    detiene automáticamente al cerrar la jornada. No se recopila ubicación fuera
-    de ese período.
+    La app usa la ubicación en segundo plano <strong>únicamente mientras tenés una
+    jornada activa</strong>, para que el seguimiento de tus entregas siga
+    funcionando con la app minimizada o la pantalla apagada. Al cerrar la jornada
+    el seguimiento se detiene. En iOS, mientras se usa la ubicación en segundo
+    plano, el sistema lo indica en la barra de estado.
   </p>
 
-  <h2>4. Compartir información con terceros</h2>
+  <h2>4. Proveedores que procesan datos</h2>
   <p>
-    No vendemos ni compartimos tu información personal con terceros con fines
-    comerciales. Los datos de ubicación y actividad son accesibles únicamente
-    por los operadores autorizados del sistema de cadetería al que pertenecés.
+    No compartimos tu información con terceros con fines comerciales. Para
+    funcionar, la app usa estos proveedores, que procesan datos en nuestro nombre:
+  </p>
+  <ul>
+    <li>
+      <strong>Amazon Web Services (AWS):</strong> autenticación de usuarios
+      (Amazon Cognito) y alojamiento de los servidores y datos del servicio.
+    </li>
+    <li>
+      <strong>Google Firebase:</strong> envío de notificaciones push (Firebase
+      Cloud Messaging) y reportes de fallos de la app (Firebase Crashlytics).
+    </li>
+  </ul>
+  <p>
+    Los datos de ubicación y actividad son accesibles únicamente por los
+    operadores autorizados del servicio de cadetería al que pertenecés.
   </p>
 
   <h2>5. Almacenamiento y seguridad</h2>
   <p>
-    Los datos se almacenan en servidores seguros. Tomamos medidas razonables para
-    proteger la información contra accesos no autorizados, pérdida o alteración.
+    Los datos se transmiten cifrados (HTTPS) y se almacenan en servidores seguros.
+    Las credenciales de sesión se guardan en el almacenamiento seguro del
+    dispositivo. Tomamos medidas razonables para proteger la información contra
+    accesos no autorizados, pérdida o alteración.
   </p>
 
   <h2>6. Retención de datos</h2>
   <p>
-    Los datos de jornadas y ubicación se conservan mientras tu cuenta esté activa
-    en el sistema. Podés solicitar la eliminación de tu cuenta y datos asociados
-    contactándonos.
+    Los datos de jornadas, pedidos y ubicación se conservan mientras tu cuenta esté
+    activa en el servicio. Podés solicitar la eliminación de tu cuenta y de los
+    datos asociados desde
+    <a href="delete-account.html">esta página</a> o escribiéndonos (ver sección 11).
   </p>
 
   <h2>7. Derechos del usuario</h2>
@@ -105,16 +150,28 @@
     <li>Acceder a los datos que tenemos sobre vos.</li>
     <li>Solicitar la corrección de datos incorrectos.</li>
     <li>Solicitar la eliminación de tu cuenta y datos personales.</li>
-    <li>Revocar el permiso de ubicación desde la configuración de tu dispositivo en cualquier momento.</li>
+    <li>Revocar en cualquier momento los permisos de ubicación, cámara o notificaciones desde la configuración de tu dispositivo.</li>
   </ul>
 
   <h2>8. Permisos de la aplicación</h2>
-  <p>La app solicita los siguientes permisos en Android:</p>
+
+  <h3>iOS</h3>
   <ul>
-    <li><code>ACCESS_FINE_LOCATION</code> — ubicación precisa durante la jornada.</li>
-    <li><code>ACCESS_COARSE_LOCATION</code> — ubicación aproximada de respaldo.</li>
-    <li><code>ACCESS_BACKGROUND_LOCATION</code> — ubicación en segundo plano durante jornada activa.</li>
-    <li><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_LOCATION</code> — servicio en primer plano para tracking continuo.</li>
+    <li><strong>Ubicación (mientras se usa la app / siempre):</strong> seguimiento de entregas durante la jornada activa.</li>
+    <li><strong>Cámara:</strong> selfie de inicio de jornada.</li>
+    <li><strong>Micrófono:</strong> lo declara el componente de cámara; la app no graba audio.</li>
+    <li><strong>Notificaciones:</strong> avisos de pedidos nuevos. Son opcionales: sin ellas la app funciona, pero no vas a recibir avisos con la app en segundo plano.</li>
+    <li><strong>Red local:</strong> solo en versiones de desarrollo, para conectarse a servidores de prueba.</li>
+  </ul>
+
+  <h3>Android</h3>
+  <ul>
+    <li><code>CAMERA</code>: selfie de inicio de jornada.</li>
+    <li><code>ACCESS_FINE_LOCATION</code> / <code>ACCESS_COARSE_LOCATION</code>: ubicación durante la jornada.</li>
+    <li><code>ACCESS_BACKGROUND_LOCATION</code>: ubicación en segundo plano durante la jornada activa.</li>
+    <li><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_LOCATION</code>: servicio en primer plano para el seguimiento continuo.</li>
+    <li><code>POST_NOTIFICATIONS</code> / <code>USE_FULL_SCREEN_INTENT</code>: avisos de pedidos nuevos, incluso con la pantalla bloqueada.</li>
+    <li><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>: evitar que el sistema corte el seguimiento durante la jornada.</li>
   </ul>
 
   <h2>9. Menores de edad</h2>
@@ -131,9 +188,9 @@
 
   <h2>11. Contacto</h2>
   <p>
-    Si tenés preguntas sobre esta política de privacidad, podés contactar al
-    desarrollador <strong>Logistica 21</strong>, responsable de la aplicación
-    <strong>Tito</strong>, en:<br />
+    Si tenés preguntas sobre esta política de privacidad o querés ejercer alguno de
+    tus derechos, podés contactar al desarrollador <strong>Logistica 21</strong>,
+    responsable de la aplicación <strong>Tito</strong>, en:<br />
     <a href="mailto:maitinn255@gmail.com">maitinn255@gmail.com</a>
   </p>
 </body>
