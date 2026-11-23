@@ -32,7 +32,7 @@
 </head>
 <body>
   <h1>Política de Privacidad de Tito</h1>
-  <p class="updated">Última actualización: 24 de octubre de 2026</p>
+  <p class="updated">Última actualización: 23 de noviembre de 2026</p>
 
   <div class="identity">
     <p><strong>Aplicación:</strong> Tito</p>
@@ -63,9 +63,10 @@
     </li>
     <li>
       <strong>Fotografía (selfie de inicio de jornada):</strong> al iniciar la
-      jornada la app usa la cámara para tomar una foto, que se usa únicamente para
-      verificar tu identidad y queda asociada al registro de esa jornada. La app no
-      accede a tu galería de fotos.
+      jornada la app usa la cámara frontal para tomar una foto, que se usa
+      únicamente para que los operadores verifiquen visualmente tu identidad. No se
+      hace reconocimiento facial. La app no accede a tu galería de fotos. Ver
+      sección 4.
     </li>
     <li>
       <strong>Datos de cuenta:</strong> nombre, correo electrónico y la información
@@ -108,7 +109,51 @@
     plano, el sistema lo indica en la barra de estado.
   </p>
 
-  <h2>4. Proveedores que procesan datos</h2>
+  <h2>4. Fotografía de inicio de jornada (datos faciales)</h2>
+  <p>
+    <strong>Qué recopilamos.</strong> Al iniciar cada jornada, la app te pide una
+    foto tomada en ese momento con la cámara frontal (una selfie). La app no accede a
+    tu galería de fotos.
+  </p>
+  <p>
+    <strong>Qué no hacemos.</strong> La foto no se procesa con reconocimiento ni
+    detección facial, no se extraen de ella rasgos, geometría ni plantillas
+    biométricas, y no se usa Face ID, la cámara TrueDepth ni ninguna otra tecnología
+    de análisis facial. Es una imagen común que se guarda tal como se tomó.
+  </p>
+  <p>
+    <strong>Para qué la usamos.</strong> Únicamente para que los operadores
+    autorizados de la cadetería a la que pertenecés puedan verificar visualmente que
+    quien inicia la jornada es el titular de la cuenta. No la usamos para publicidad,
+    perfilado ni ningún otro fin, y no la usamos para entrenar modelos de
+    inteligencia artificial.
+  </p>
+  <p>
+    <strong>Con quién se comparte.</strong> No se vende ni se comparte con terceros.
+    Solo se muestra a los operadores autorizados en el panel de gestión del servicio.
+    Se almacena en Amazon Web Services (Amazon S3), que actúa como proveedor de
+    alojamiento en nuestro nombre (ver sección 5).
+  </p>
+  <p>
+    <strong>Dónde se almacena.</strong> En servidores de Amazon Web Services en la
+    región de São Paulo (Brasil), con cifrado en reposo y transmitida siempre por
+    conexión cifrada (HTTPS). En la app de iOS, la foto se guarda con acceso privado
+    y el panel de gestión la muestra mediante enlaces temporales que vencen a los
+    pocos minutos.
+  </p>
+  <p>
+    <strong>Cuánto tiempo se conserva.</strong> Se guarda una sola foto por cuenta:
+    cada vez que iniciás una jornada, la foto nueva reemplaza a la anterior, que se
+    elimina. La última foto se conserva mientras tu cuenta esté activa.
+  </p>
+  <p>
+    <strong>Cómo se elimina.</strong> Al eliminarse tu cuenta, ya sea porque lo
+    solicitaste desde <a href="delete-account.html">esta página</a> o por correo
+    (ver sección 12), o porque la cadetería da de baja tu cuenta, la foto se borra
+    junto con el resto de tus datos personales dentro de los 7 días hábiles.
+  </p>
+
+  <h2>5. Proveedores que procesan datos</h2>
   <p>
     No compartimos tu información con terceros con fines comerciales. Para
     funcionar, la app usa estos proveedores, que procesan datos en nuestro nombre:
@@ -128,7 +173,7 @@
     operadores autorizados del servicio de cadetería al que pertenecés.
   </p>
 
-  <h2>5. Almacenamiento y seguridad</h2>
+  <h2>6. Almacenamiento y seguridad</h2>
   <p>
     Los datos se transmiten cifrados (HTTPS) y se almacenan en servidores seguros.
     Las credenciales de sesión se guardan en el almacenamiento seguro del
@@ -136,15 +181,16 @@
     accesos no autorizados, pérdida o alteración.
   </p>
 
-  <h2>6. Retención de datos</h2>
+  <h2>7. Retención de datos</h2>
   <p>
     Los datos de jornadas, pedidos y ubicación se conservan mientras tu cuenta esté
-    activa en el servicio. Podés solicitar la eliminación de tu cuenta y de los
+    activa en el servicio. De la fotografía de inicio de jornada se conserva solo la
+    más reciente (ver sección 4). Podés solicitar la eliminación de tu cuenta y de los
     datos asociados desde
-    <a href="delete-account.html">esta página</a> o escribiéndonos (ver sección 11).
+    <a href="delete-account.html">esta página</a> o escribiéndonos (ver sección 12).
   </p>
 
-  <h2>7. Derechos del usuario</h2>
+  <h2>8. Derechos del usuario</h2>
   <p>Tenés derecho a:</p>
   <ul>
     <li>Acceder a los datos que tenemos sobre vos.</li>
@@ -153,13 +199,12 @@
     <li>Revocar en cualquier momento los permisos de ubicación, cámara o notificaciones desde la configuración de tu dispositivo.</li>
   </ul>
 
-  <h2>8. Permisos de la aplicación</h2>
+  <h2>9. Permisos de la aplicación</h2>
 
   <h3>iOS</h3>
   <ul>
     <li><strong>Ubicación (mientras se usa la app / siempre):</strong> seguimiento de entregas durante la jornada activa.</li>
     <li><strong>Cámara:</strong> selfie de inicio de jornada.</li>
-    <li><strong>Micrófono:</strong> lo declara el componente de cámara; la app no graba audio.</li>
     <li><strong>Notificaciones:</strong> avisos de pedidos nuevos. Son opcionales: sin ellas la app funciona, pero no vas a recibir avisos con la app en segundo plano.</li>
     <li><strong>Red local:</strong> solo en versiones de desarrollo, para conectarse a servidores de prueba.</li>
   </ul>
@@ -174,19 +219,19 @@
     <li><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>: evitar que el sistema corte el seguimiento durante la jornada.</li>
   </ul>
 
-  <h2>9. Menores de edad</h2>
+  <h2>10. Menores de edad</h2>
   <p>
     Esta aplicación está destinada a uso laboral por personas mayores de 18 años.
     No recopilamos intencionalmente información de menores.
   </p>
 
-  <h2>10. Cambios a esta política</h2>
+  <h2>11. Cambios a esta política</h2>
   <p>
     Podemos actualizar esta política ocasionalmente. Te notificaremos sobre cambios
     significativos a través de la app o por correo electrónico.
   </p>
 
-  <h2>11. Contacto</h2>
+  <h2>12. Contacto</h2>
   <p>
     Si tenés preguntas sobre esta política de privacidad o querés ejercer alguno de
     tus derechos, podés contactar al desarrollador <strong>Logistica 21</strong>,
